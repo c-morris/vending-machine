@@ -1,0 +1,42 @@
+\section{Operation of the Change Making Circuit}
+
+\subsection{Initialization}
+\begin{enumerate}
+\item{Set enable at low}
+\item{Cycle Clock from low to high to low}
+\item{Fill machine with bills to make change}
+\item{Reset change counters, by cycling switches 1,2, and 3 low to high to low}
+\end{enumerate}
+
+\subsection{How to Make Change}
+\begin{enumerate}
+\item{Feed the value you want to make change of over the data bus}
+\item{Make certain clock and enable are low}
+\item{Set clock to high, then to Low}
+\item{Set enable to high}
+\item{Allow clock to cycle}
+\item{Read output LEDs as bill to dispense and clock for dispenser}
+This prototype emulates support for the bill dispensing machine 
+described in this manual.
+\end{enumerate}
+
+\subsection{Maintenance}
+\begin{itemize}
+\item{There are three LED's which mark when their category of  bills is empty
+for that category. The LED's are labeled for their value, and are shown on the
+specification diagram.}
+
+\item{When the restock change LED's are lit the maintainer must open up the 
+machine and fill up the appropriate bill and then reset its counter by 
+flipping its switch: low to high to low.}
+
+\item{The 10s have a reset switch at 3. The 5s have 2 as their reset switch.
+The 1s have 1 as their reset switch.} 
+
+\item{For clarification to more technical analysis: reset refers to set on
+the chain of flip flops, but is stated as reset to improve understanding for 
+technicians who lack an electrical or computer engineering background.}
+
+\item{If issues arise where initialization fails try toggling clock while
+enable is Low.}
+\end{itemize}

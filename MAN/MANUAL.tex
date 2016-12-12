@@ -1,6 +1,8 @@
 \documentclass[12pt,letterpaper]{article}
 \usepackage{graphicx}
+\graphicspath{{./images/}}
 \usepackage[margin=1.0in]{geometry}
+\usepackage{float}
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
@@ -17,7 +19,8 @@
 \include{./tex/chapters}
 \input{./tex/IOInput}
 \input{./tex/InputOperation}
-\newpage
+\input{./tex/IOVend}
+\input{./tex/VendOperation}
 \input{./tex/Spec}
 \input{./tex/IO_CM}
 \input{./tex/ChangeMakerOperation}

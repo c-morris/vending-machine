@@ -1,0 +1,14 @@
+\section{Vending Circuit IO}
+The purpose of this section is to Provide extra detail on the specification of IO streams and how they interface with other devices. 
+
+\subsection{Vend Details}
+\begin{itemize}
+\item \textbf{Clock:} The clock signal tells the circuit to subtract the value of the vended item from the value that is currently stored in memory. A clock pulse is only allowed to reach the memory if the amount of money int he machine is greater than the cost of the item. Thus, if the user requests an item without putting enough money into the machine the machine will not vend the item. We considered whether or not it would be beneficial to give the user some feedback if they requested an item that they had not put in enough money for and decided that since the amount of money currently in the machine is displayed along with the cost of the item that they want to buy that this feedback would be redundant. 
+\item $\mathbf{B_{0..5}}$\textbf{:} These inputs are a binary representation of the price of the item with $B_0$ being the least significant bit. They are loaded from the item selector circuit.
+\item \textbf{Selector:} This is the same selector bit as in section \ref{selector}. 
+\end{itemize}
+
+\subsection{Output Details}
+\begin{itemize}
+\item \textbf{Dollars In Machine:} This is the same as in section \ref{dollars-in-machine}.
+\end{itemize}

@@ -5,68 +5,69 @@
 This project was a very interesting extension of the normal coursework
 for CSE2300W, and was an excellent learning experience. The goal of 
 building the circuitry for a vending machine involved large amounts of 
-coordination. Despite our best efforts to pre-define all connections, we
-found that communication was very important to the proper construction
-of our circuit. The actual design of the circuit was also much more 
-difficult than the normal circuits we built during lab sections this year.
+coordination. We initially developed a well defined framework for 
+interaction between our circuits, so that we could treat each others 
+circuits as black boxes which perform a reliable action. We had 
+hoped that this would limit group communication as we would already know 
+everything we needed to know about how each other's circuits worked, 
+but in the end, we often needed to discuss changes and suggestions. This 
+was because our initial predictions for how best to do the 
+intersections between circuits proved suboptimal and we needed to develop 
+improvements. The failure of our initial design plan resulted from the 
+circuit being more difficult to design than the circuits we built in our 
+lab sections.\\
 
 
 We began this project by planning out the use case of our circuit and
 arrived upon the interesting idea of having the NSA be our customer. Then 
 we moved onto developing the overarching idea of how our vending machine 
-would work. The main idea was to split the project into as many simple 
-subunits as possible, and then distribute the components fairly. It took 
-two meetings to develop these subunits where at the end of the second we 
-distributed the subunits based on who wanted what. Luke took the change 
-making circuitry. Cameron took the primary action of bills in machine 
-including adding new bills that are read and subtracting the price of an 
-item when it is vended. Brandon took all the inventory and change bills 
-in the machine along with the display. After distributing these tasks we 
+would work. The main idea was to split the project into simple subunits, 
+which would be evenly distributed. After distributing these tasks, we 
 developed requirements for each point of connection between our circuits. 
-This specification was very simple, but really only simplified the design 
-phase and we continued modifying these interconnecting points as our 
-designs developed.
+We continuously improved upon these ideas during the project, discussing 
+additions to and removals from the design. Lastly, we developed complete 
+functional simulations of our circuit.\\
 
 
-The project gradually developed over the course of the second half of the 
-semester. Eventually we realized that certain parts of our circuit would 
-be quite large and it would be optimal to abstract them away. In addition 
-to this we found that certain subunits were better localized on other 
-parts of the circuit. On the fourth week of meetings we reassigned the 
-number of bills in the machine to Luke as determining the amount of 
-change to dispense relies on every bit of each bill counting register. 
-Reassigning this bit of memory did add complexity to the change making 
-circuit, but it reduced the complexity of combining all our subunits 
-together. In retrospect, it was a good idea, but it ended up filling 
-a large amount of space on the change making circuit board. This project 
-facilitated development of teamwork skills far beyond what was necessary 
-in the labs. Generally, in the normal lab sections we would communicate 
-with neighbors about the lab assignments specifications, or particularly 
-interesting solutions. In this project we had to discuss a large amount of
-detail about each of our parts.
+The circuit gradually developed over the course of the second half of the 
+semester. Eventually, we realized that certain parts of our circuit would 
+be quite large and it would be optimal to reuse parts of the circuit with
+similar functionality. In addition to this, we realized that we could 
+reduce the amount of wire used to connect our subunits if we redistributed
+some of them. So, on the fourth week of meetings we reassigned the 
+number of bills in the machine to the change making circuit, which made the
+inventory and change making portion much more self contained. The final 
+stage involved assembling our individual components into one vending 
+machine. This was the most difficult part of the project, but it was 
+gratifying as it facilitated development of teamwork skills far beyond what 
+was necessary in the labs. In the normal lab sections we would only talk
+with neighbors about the lab assignment's specifications, or particularly 
+interesting solutions we came up with. Within the non-honors portion of 
+the class we never had to cooperatively develop distinct circuits which 
+rely on the correctness of our team member's circuit.\\
 
 
 This project was also much more difficult than any of the lab work we 
 completed during normal meeting times. Our circuit was sequential in 
 nature and making functional sequential circuits is a step above what we 
-had done in lab as sequential circuits rely on the timing of specific 
-events and certain issues including momentarily false answers which 
-appear for a couple nanoseconds, will break a sequential logic circuit. 
-The specific sequential logic circuits we had to develop were also 
-significantly larger in terms of scope than the ones we made in lab. 
-Our individual contributions were also much larger than normal circuits 
-from the weekly labs which made debugging several orders of magnitude 
-harder. The final circuits we used also required that we learn to use 
-our whole toolkit of possible chips to solve the problem at hand. Cameron 
-ended having to actually use NAND gates for their alternate purpose to
-save on space within his board, as board real estate was rather valuable. 
+had done in lab, as sequential circuits relies on the timing of specific 
+events. New issues arise as false answers, which appear for only a couple, 
+nanoseconds will break a sequential logic circuit, while they don't 
+affect non-sequential circuits in any human discernible way. The specific 
+circuits we had to develop for the vending machine were also 
+significantly larger, in terms of scope, than the ones we made in lab. 
+This meant that the designing our circuits required that we learn to use 
+our whole toolkit of chips to solve our assigned problems. For 
+example, Cameron used NAND gates to emulate other gates so that he had 
+optimal space usage, as board real estate was rather valuable. \\
 
 
 Overall we ended learning a lot about circuit design and the difficulties 
-of developing circuits which rely on heavy interoperation. We also saw, 
-how a lack of communication would have lead to extra work in regards to 
-not recognizing when we were repeating each others work, and having to 
-redo our own work due to lack of detail in requirements. We managed to 
-avoid a large amount of work by properly specifying our requirements 
-before beginning work.
+of developing circuits which rely heavily on interoperation. We also saw 
+how a lack of communication would have lead to extra work. Discussing our
+circuits allowed us to recognize when we were repeating each others work, 
+and could reuse each other's circuits in ways we had originally slipped 
+past us. As a result, we managed to avoid a large amount of work by 
+properly planning the project, and by maintaining a high level of 
+correspondence.
 

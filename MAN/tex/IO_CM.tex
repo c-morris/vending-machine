@@ -8,7 +8,7 @@ with other devices.
 \item{\textbf{Enable Bit:} This bit tells the change maker to start computing
 and when it is disabled, the circuit will halt no matter what part of
 the calculation it is in. In addition to this, the enable bit is not
-shown to the user, it only connects to the vend and bill count circuit.}
+shown to the user, it only connects to the vend and bill count circuit. It is active low}
 \item{\textbf{Clock:} The cycling of the clock sequentially makes change. 
 Generally takes 6 clock cycles considering average values for change in 
 machine and number to make change of. This is hidden from user}
@@ -26,9 +26,9 @@ This should halt operation of most other operations. When this is low the
 circuit is not doing anything}
 \item{\textbf{Bill to Dispense:} This is a binary number representing the
 bill to dispense. This is fed to the bill dispense hardware, but in the
-prototype this value is displayed on the 4 LEDs.}
-\item{\textbf{Dispenser Clock:} This sends a clock pulse with the bill to
-dispense to enqueue the bill current being displayed. This is an LED on
+prototype this value is displayed on the upper 2 LEDs.}
+\item{\textbf{Dispenser Clock:} This sends a clock pulse, with the bill to
+dispense, to enqueue the bill current being displayed. This is an LED on
 the prototype.}
-\item{\textbf{Counter Low LEDs:} These LEDs indicate when change is low.} 
+\item{\textbf{Counter Low LEDs:} These LEDs indicate when change is empty. The upper one refers to the state of the tens counter and the lower one refers to the state of all the bill counters.} 
 \end{itemize}

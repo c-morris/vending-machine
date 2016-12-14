@@ -5,33 +5,31 @@
 \item{Set enable at low}
 \item{Cycle Clock from low to high to low}
 \item{Fill machine with bills to make change}
-\item{Reset change counters, by cycling switches 1,2, and 3 low to high to low}
+\item{Reset change counters, by cycling switch 1 from high to low to high}
+\item{Circuit must have spent time in the non-vending state after powering it on}
 \end{enumerate}
 
 \subsection{How to Make Change}
 \begin{enumerate}
 \item{Feed the value you want to make change of over the data bus}
-\item{Make certain clock and enable are low}
-\item{Set clock to high, then to Low}
-\item{Set enable to high}
+\item{Set doVend() to high}
 \item{Allow clock to cycle}
-\item{Read output LEDs as bill to dispense and clock for dispenser}
-This prototype emulates support for the bill dispensing machine 
-described in this manual.
+\item{Read the two upper output LEDs as bill to dispense and clock for dispenser}
+\begin{enumerate}
+\item{00 is one}
+\item{01 is five}
+\item{10 is ten}
+\end{enumerate}
+This prototype supports some form of bill dispensing machine, which takes a two bit number as a selector input for the type of bill and a clock pulse to know to dispense the bill
 \end{enumerate}
 
 \subsection{Maintenance}
 \begin{itemize}
-\item{There are three LED's which mark when their category of  bills is empty
-for that category. The LED's are labeled for their value, and are shown on the
-specification diagram.}
+\item{There are two LED's which mark when their category of  bills is empty. The LED's are labeled for their value, and are shown on the specification diagram.}
 
-\item{When the restock change LED's are lit the maintainer must open up the 
-machine and fill up the appropriate bill and then reset its counter by 
+\item{When the restock change LED's are lit the maintainer must open up the machine and fill up the appropriate bill and then reset its counter by 
 flipping its switch: low to high to low.}
-
-\item{The 10s have a reset switch at 3. The 5s have 2 as their reset switch.
-The 1s have 1 as their reset switch.} 
+\item{The reset switch is at position 7.} 
 
 \item{For clarification to more technical analysis: reset refers to set on
 the chain of flip flops, but is stated as reset to improve understanding for 

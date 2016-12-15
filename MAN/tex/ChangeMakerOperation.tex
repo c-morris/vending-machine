@@ -3,7 +3,6 @@
 \subsection{Initialization}
 \begin{enumerate}
 \item{Set enable at low}
-\item{Cycle Clock from low to high to low}
 \item{Fill machine with bills to make change}
 \item{Reset change counters, by cycling switch 1 from high to low to high}
 \item{Circuit must have spent time in the non-vending state after powering it on}
@@ -12,9 +11,9 @@
 \subsection{How to Make Change}
 \begin{enumerate}
 \item{Feed the value you want to make change of over the data bus}
-\item{Set doVend() to high}
+\item{Set Enable to low}
 \item{Allow clock to cycle}
-\item{Read the two upper output LEDs as bill to dispense and clock for dispenser}
+\item{Read the two upper output LEDs as bill to dispense and the bottom as the clock for dispenser}
 \begin{enumerate}
 \item{00 is one}
 \item{01 is five}

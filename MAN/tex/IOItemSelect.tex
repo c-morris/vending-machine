@@ -1,0 +1,13 @@
+\section{Item Selector IO}
+
+\subsection{Input Details}
+\begin{itemize}
+  \item \textbf{Vend Clock Pulse:} A clock pulse that indicates to this circuit when a user has paid for and received an item.
+  \item \textbf{Item Count:} A number from 0 to 2 in binary representation indicating which item the user would like to vend. In a real vending machine, this would be a keypad with item codes labeled under a display.
+\end{itemize}
+
+\subsection{Output Details}
+\begin{itemize}
+  \item \textbf{Item Price:} The price of the currently selected item in 4 bit binary.
+  \item \textbf{Item Inventory Out:} Three separate outputs indicate when an item is no longer in inventory and needs to be restocked. This indicates to a user not to request this the flagged item. On the board, they are labeled top to bottom, starting from item 1 to item 3.
+\end{itemize}
